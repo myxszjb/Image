@@ -35,7 +35,7 @@ export async function onRequestPost(context) {
             await insertImageData(env.IMG, responseData[0].src, Referer, clientIP, rating.rating, formattedDate);
         } catch (e) {
             console.log(e);
-            await insertImageData(env.IMG, responseData[0].src, Referer, clientIP, 5, formattedDate);
+            await insertImageData(env.IMG, responseData[0].src, Referer, clientIP, 100, formattedDate);
         }
 
         return Response.json(responseData);
